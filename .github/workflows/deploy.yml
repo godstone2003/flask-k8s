@@ -18,8 +18,8 @@ jobs:
 
       - name: Build and Tag Docker Image
         run: |
-          docker build -t flask-hola-repo:${{ github.sha }} .
-          docker tag flask-hola-repo:${{ github.sha }} ${{ secrets.ECR_REPOSITORY_URI }}/flask-hola-repo:latest
+          docker build -t flask-hola:${{ github.sha }} .
+          docker tag flask-hola:${{ github.sha }} ${{ secrets.ECR_REPOSITORY_URI }}/flask-hola-repo:latest
           docker tag flask-hola:${{ github.sha }} godstone7o1/flask-hola-repo:latest
 
 
