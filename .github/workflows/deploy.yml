@@ -20,7 +20,7 @@ jobs:
         run: |
           docker build -t flask-hola:${{ github.sha }} .
           docker tag flask-hola:${{ github.sha }} ${{ secrets.ECR_REPOSITORY_URI }}:latest
-          docker tag flask-hola:${{ github.sha }} ${{ secrets.DOCKERHUB_USERNAME }}/flask-hola:latest
+          docker tag flask-hola:${{ github.sha }} ${{ secrets.DOCKERHUB_USERNAME }}/flask-hola-repo:latest
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
