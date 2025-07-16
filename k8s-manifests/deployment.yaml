@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: flask-hola
-          image: 354918366304.dkr.ecr.us-east-2.amazonaws.com/flask-hola-repo:latest
+          image: 354918366304.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/flask-hola-repo:latest
   # 👈 Replace with your actual ECR URI or use GitHub Action to tag
           ports:
             - containerPort: 5000
