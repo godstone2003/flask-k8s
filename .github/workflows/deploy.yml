@@ -22,7 +22,6 @@ jobs:
           docker tag flask-hola:${{ github.sha }} ${{ secrets.ECR_REPOSITORY_URI }}/flask-hola-repo:latest
           docker tag flask-hola:${{ github.sha }} godstone7o1/flask-hola-repo:latest
 
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -49,13 +48,11 @@ jobs:
         run: |
           docker push godstone7o1/flask-hola-repo:latest
 
-
       - name: Install kubectl
         run: |
-         curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-         chmod +x kubectl
-         sudo mv kubectl /usr/local/bin/
-
+          curl -LO "https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/kubectl
 
       - name: Update kubeconfig
         run: |
