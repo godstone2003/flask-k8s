@@ -27,7 +27,7 @@ def home():
 
 @app.route('/greet', methods=['POST'])
 def greet():
-    name = request.form.get('name', 'Stranger')
+    name = request.form.get('name', 'Strangers')
     return f'<h3>Hola {name}!</h3><a href="/">Go Back</a>'
 
 # Health check
