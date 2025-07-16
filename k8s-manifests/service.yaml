@@ -6,6 +6,7 @@ metadata:
     app: flask-hola
 spec:
   type: LoadBalancer
+  externalTrafficPolicy: Local
   selector:
     app: flask-hola
   ports:
