@@ -6,7 +6,7 @@ metrics = PrometheusMetrics(app)
 
 # HTML form
 form_html = '''
-    <h2>Enter your names </h2>
+    <h2>Enter your names guest</h2>
     <form method="POST" action="/greet">
         <input type="text" name="name" required>
         <input type="submit" value="Say Hola">
